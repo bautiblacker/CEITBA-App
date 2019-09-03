@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
 //        let ref = Database.database().reference()
         
 //        ref.child("userid").setValue("bla", forKey: "sss") Puedo setear/agregar valores a la DB asi
