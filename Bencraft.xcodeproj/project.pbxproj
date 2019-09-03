@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42BA840F231E05EA008B7872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42BA840E231E05EA008B7872 /* GoogleService-Info.plist */; };
 		42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */; };
 		42EFE4F12319AA1400FC79D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4F02319AA1400FC79D8 /* ViewController.swift */; };
 		42EFE4F42319AA1400FC79D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F22319AA1400FC79D8 /* Main.storyboard */; };
 		42EFE4F62319AA1400FC79D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F52319AA1400FC79D8 /* Assets.xcassets */; };
 		42EFE4F92319AA1400FC79D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F72319AA1400FC79D8 /* LaunchScreen.storyboard */; };
+		76D8A456398A43FF33810EB3 /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42BA840E231E05EA008B7872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42EFE4EB2319AA1400FC79D8 /* Bencraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bencraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42EFE4F02319AA1400FC79D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		42EFE4F52319AA1400FC79D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42EFE4F82319AA1400FC79D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42EFE4FA2319AA1400FC79D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
+		5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bencraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7376AEEB5E162B09E985C2 /* Pods-Bencraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.release.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D8A456398A43FF33810EB3 /* Pods_Bencraft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				42EFE4ED2319AA1400FC79D8 /* Bencraft */,
 				42EFE4EC2319AA1400FC79D8 /* Products */,
+				59196D4C1CBDCCBC9100B945 /* Pods */,
+				E6772C2C77AD62220523AA7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,27 @@
 				42EFE4F52319AA1400FC79D8 /* Assets.xcassets */,
 				42EFE4F72319AA1400FC79D8 /* LaunchScreen.storyboard */,
 				42EFE4FA2319AA1400FC79D8 /* Info.plist */,
+				42BA840E231E05EA008B7872 /* GoogleService-Info.plist */,
 			);
 			path = Bencraft;
+			sourceTree = "<group>";
+		};
+		59196D4C1CBDCCBC9100B945 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */,
+				CB7376AEEB5E162B09E985C2 /* Pods-Bencraft.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6772C2C77AD62220523AA7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42EFE4FD2319AA1400FC79D8 /* Build configuration list for PBXNativeTarget "Bencraft" */;
 			buildPhases = (
+				42D98A537A1FA93C982E5F8E /* [CP] Check Pods Manifest.lock */,
 				42EFE4E72319AA1400FC79D8 /* Sources */,
 				42EFE4E82319AA1400FC79D8 /* Frameworks */,
 				42EFE4E92319AA1400FC79D8 /* Resources */,
+				ACD26401B15BD5D5230861CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				42EFE4F92319AA1400FC79D8 /* LaunchScreen.storyboard in Resources */,
+				42BA840F231E05EA008B7872 /* GoogleService-Info.plist in Resources */,
 				42EFE4F62319AA1400FC79D8 /* Assets.xcassets in Resources */,
 				42EFE4F42319AA1400FC79D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42D98A537A1FA93C982E5F8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bencraft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD26401B15BD5D5230861CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bencraft/Pods-Bencraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bencraft/Pods-Bencraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bencraft/Pods-Bencraft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42EFE4E72319AA1400FC79D8 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		42EFE4FE2319AA1400FC79D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ss.Bencraft;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bencraft.ceitbapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +372,7 @@
 		};
 		42EFE4FF2319AA1400FC79D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB7376AEEB5E162B09E985C2 /* Pods-Bencraft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ss.Bencraft;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bencraft.ceitbapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
