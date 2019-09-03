@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController {
+class LogInController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
