@@ -13,11 +13,30 @@
         <!--Log In View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Log In View" customClass="LogInController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="BYZ-38-t0r" userLabel="Log In View" customClass="LogInController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verifyAmbiguity="off" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-O4-xmg">
+                                <rect key="frame" x="108.5" y="406.5" width="197" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="197" id="2YX-Yi-cP0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="83" id="H0w-Ep-4Hv"/>
+                                    <constraint firstAttribute="height" constant="83" id="VUH-dc-bU0"/>
+                                    <constraint firstAttribute="width" constant="197" id="vOe-0Q-sye"/>
+                                </constraints>
+                                <state key="normal" title="Go to my view"/>
+                                <connections>
+                                    <segue destination="Zbl-AY-pES" kind="show" id="5iX-Eo-N2p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AvF-O4-xmg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="83n-Ua-P5f"/>
+                            <constraint firstItem="AvF-O4-xmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O7Y-uU-QCG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -58,17 +77,48 @@
         <!--Specific Beneficios View-->
         <scene sceneID="q68-ZX-HF5">
             <objects>
-                <viewController id="Zbl-AY-pES" userLabel="Specific Beneficios View" customClass="BeneficiosEspecificosController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeneficiosEspecificosController" id="Zbl-AY-pES" userLabel="Specific Beneficios View" customClass="BeneficiosEspecificosController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nKi-G7-wIh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eth-kb-AhI" customClass="UPCarouselFlowLayout" customModule="Bencraft">
+                                <rect key="frame" x="20" y="218" width="374" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ale-lL-Tks">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cellId" id="K4r-Eg-YAt">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sideItemScale">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sideItemAlpha">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ddy-wo-G2P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBR-Ln-EzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="106"/>
+            <point key="canvasLocation" x="2005.7971014492755" y="105.80357142857143"/>
         </scene>
     </scenes>
 </document>
