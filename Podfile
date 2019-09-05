@@ -10,5 +10,6 @@ target 'Bencraft' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'UPCarouselFlowLayout'
 
 end
