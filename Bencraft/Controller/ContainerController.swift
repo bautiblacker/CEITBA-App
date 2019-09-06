@@ -10,7 +10,7 @@ import UIKit
 
 class ContainerController: UIViewController {
     
-    var menuController: UIViewController!
+    var menuController: MenuController!
     var centerController: UIViewController!
     var isExpanded = false
     
@@ -37,38 +37,75 @@ class ContainerController: UIViewController {
     func configureMenuController() {
         if menuController == nil {
             menuController = MenuController()
-//            menuController.delegate = self
+            menuController.delegate = self
             view.insertSubview(menuController.view, at: 0)
             addChild(menuController)
             menuController.didMove(toParent: self)
         }
     }
     
-    func showMenuController(shouldExpand: Bool) {
+    func animatePanel(shouldExpand: Bool, menuOption: MenuOption?) {
         if shouldExpand {
             // Mostrar el Menu
             
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
             }, completion: nil)
         } else {
             // Esconder el Menu
             
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-                self.centerController.view.frame.origin.x = 0
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                
             }, completion: nil)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.centerController.view.frame.origin.x = 0
+            }) { (_) in
+                guard let menuOption = menuOption else { return }
+                self.didSelectMenuOption(menuOption: menuOption)
+            }
+        }
+    }
+    
+    func didSelectMenuOption(menuOption: MenuOption) {
+        switch menuOption {
+        case .Perfil:
+            print("Perfil")
+        case .Actividades:
+            print("Actividades")
+        case .Beneficios:
+            print("Beneficios")
+        case .Cursos:
+            print("Cursos")
+        case .Deportes:
+            print("Deportes")
+        case .Gym:
+            print("Gym")
+        case .Idiomas:
+            print("Idiomas")
+        case .Kit:
+            print("Kit")
+        case .Lab:
+            print("Lab")
+        case .Lockers:
+            print("Lockers")
+        case .Contacto:
+            print("Contacto")
+        case .Settings:
+            print("Settings")
+        case .LogOut:
+            print("LogOut")
         }
     }
 }
 
 extension ContainerController: HomeControllerDelegate {
-    func handleMenuToggle() {
-        
+    func handleMenuToggle(forMenuOption menuOption: MenuOption?) {
         if !isExpanded {
             configureMenuController()
         }
         
         isExpanded = !isExpanded
-        showMenuController(shouldExpand: isExpanded)
+        animatePanel(shouldExpand: isExpanded, menuOption: menuOption)
     }
 }

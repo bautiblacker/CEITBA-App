@@ -20,7 +20,7 @@ class BeneficiosController: UIViewController {
     }
     
     @objc func handleMenuToggle() {
-            delegate?.handleMenuToggle()
+        delegate?.handleMenuToggle(forMenuOption: nil)
     }
     
     func configureNavigationBar() {
@@ -30,6 +30,19 @@ class BeneficiosController: UIViewController {
         navigationItem.title = "CEITBA"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_white_3x").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    func addBenefits() {
 //        addButtonsUsingStackView()
