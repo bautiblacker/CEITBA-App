@@ -9,23 +9,25 @@
 import UIKit
 
 class SpecificBenefitCell: UICollectionViewCell {
-    @IBOutlet weak var featuredImageView: UIImageView!
-    @IBOutlet weak var benefitDescription: UILabel!
     
-    var benefit: Benefit? {
+    @IBOutlet weak var featuredImageView: UIImageView!
+//    @IBOutlet weak var benefitDescription: UILabel!
+    
+    var benefit: Food? {
         didSet {
             self.updateUI()
         }
     }
     
+    
     fileprivate func updateUI() {
         if let benefit = benefit {
             featuredImageView.image = benefit.featuredImage
-            benefitDescription.text = benefit.description
+//            benefitDescription.text = benefit.description
             
         } else {
             featuredImageView.image = nil
-            benefitDescription.text = nil
+//            benefitDescription.text = nil
         }
     }
     
@@ -37,6 +39,8 @@ class SpecificBenefitCell: UICollectionViewCell {
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 5, height: 10)
         self.clipsToBounds = false
+        self.featuredImageView.contentMode = UIView.ContentMode.scaleAspectFill
+        self.featuredImageView.clipsToBounds = true
     }
     
 }

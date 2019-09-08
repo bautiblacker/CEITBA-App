@@ -12,7 +12,7 @@ class BenefitsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var benefits = Benefit.fetchBenefits()
+    var benefits = Food.fetchBenefits()
     let cellScaling: CGFloat = 0.6
     
     override func viewDidLoad() {

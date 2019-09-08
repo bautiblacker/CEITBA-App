@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8E-gt-ioh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8E-gt-ioh">
                                 <rect key="frame" x="159" y="433" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to my view"/>
                                 <connections>
                                     <segue destination="Zbl-AY-pES" kind="show" id="IJZ-HJ-kdX"/>
@@ -28,6 +27,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v8E-gt-ioh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="fdg-bK-MUS"/>
+                            <constraint firstItem="v8E-gt-ioh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="389" id="lRT-gY-mpq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -42,6 +45,16 @@
                     <view key="view" contentMode="scaleToFill" id="A7M-LT-oPH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YBj-gj-2Ob">
+                                <rect key="frame" x="87" y="722" width="240" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sy1-8M-khO">
+                                <rect key="frame" x="-19" y="127" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YzS-Og-0qm"/>
                     </view>
@@ -68,8 +81,8 @@
         <!--Specific Beneficios View-->
         <scene sceneID="q68-ZX-HF5">
             <objects>
-                <viewController id="Zbl-AY-pES" userLabel="Specific Beneficios View" customClass="BenefitsViewController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nKi-G7-wIh">
+                <viewController storyboardIdentifier="sectionTitle" id="Zbl-AY-pES" userLabel="Specific Beneficios View" customClass="BenefitsViewController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nKi-G7-wIh" customClass="BenefitsViewC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -87,50 +100,34 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="NwL-fz-RH9"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eUC-RC-ifs">
-                                <rect key="frame" x="20" y="131" width="374" height="614"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ykc-69-KB4">
+                                <rect key="frame" x="20" y="136" width="374" height="625"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="40x-Yo-Xoe"/>
-                                    <constraint firstAttribute="height" constant="616" id="ytB-ix-vF3"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gVa-X9-mst">
-                                    <size key="itemSize" width="300" height="500"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tfw-r9-WlF">
+                                    <size key="itemSize" width="350" height="600"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="benefitCell" id="9NK-I8-gYC" customClass="SpecificBenefitCell" customModule="Bencraft" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="57" width="300" height="500"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="benefitCell" id="4Db-zx-9oT" customClass="SpecificBenefitCell" customModule="Bencraft" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12.5" width="350" height="600"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-6U-5oe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqj-3d-Neo">
-                                                    <rect key="frame" x="0.0" y="439" width="300" height="61"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-H1-Wt7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="zfc-6U-5oe" secondAttribute="trailing" id="7SB-ac-DWc"/>
-                                            <constraint firstItem="zfc-6U-5oe" firstAttribute="leading" secondItem="9NK-I8-gYC" secondAttribute="leading" id="YO6-7P-pCk"/>
-                                            <constraint firstAttribute="bottom" secondItem="zfc-6U-5oe" secondAttribute="bottom" id="fum-ha-gCp"/>
-                                            <constraint firstItem="zfc-6U-5oe" firstAttribute="top" secondItem="9NK-I8-gYC" secondAttribute="top" id="r3S-US-YNk"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="350" height="600"/>
                                         <connections>
-                                            <outlet property="benefitDescription" destination="Qqj-3d-Neo" id="XOg-hz-ygt"/>
-                                            <outlet property="featuredImageView" destination="zfc-6U-5oe" id="FMJ-cy-Mlk"/>
+                                            <outlet property="featuredImageView" destination="ua3-H1-Wt7" id="6U6-nH-Ezd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -140,11 +137,9 @@
                         <constraints>
                             <constraint firstItem="ddy-wo-G2P" firstAttribute="trailing" secondItem="Pds-2I-yTG" secondAttribute="trailing" constant="212" id="50l-Xg-tu4"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="top" secondItem="Pds-2I-yTG" secondAttribute="bottom" constant="8" id="B9d-Rh-7Ne"/>
-                            <constraint firstItem="eUC-RC-ifs" firstAttribute="top" secondItem="Pds-2I-yTG" secondAttribute="bottom" constant="8" id="Bsl-0c-6sP"/>
                             <constraint firstItem="Pds-2I-yTG" firstAttribute="leading" secondItem="ddy-wo-G2P" secondAttribute="leading" constant="18" id="DM4-FU-CL5"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="leading" secondItem="nKi-G7-wIh" secondAttribute="leadingMargin" id="ESw-h3-wIt"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="leading" secondItem="nKi-G7-wIh" secondAttribute="leadingMargin" id="FLt-QM-8fp"/>
-                            <constraint firstItem="eUC-RC-ifs" firstAttribute="leading" secondItem="ddy-wo-G2P" secondAttribute="leading" constant="20" id="Gtf-m5-vIl"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="trailing" secondItem="nKi-G7-wIh" secondAttribute="trailingMargin" id="MJv-1R-pmu"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="trailing" secondItem="nKi-G7-wIh" secondAttribute="trailingMargin" id="W60-D8-cYU"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="top" secondItem="Pds-2I-yTG" secondAttribute="bottom" constant="8" id="WvT-0k-Nhy"/>
@@ -156,7 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="ddy-wo-G2P"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="eUC-RC-ifs" id="4cK-rI-7x1"/>
+                        <outlet property="collectionView" destination="ykc-69-KB4" id="PZy-cn-MtR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBR-Ln-EzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
