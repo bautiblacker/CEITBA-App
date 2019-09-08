@@ -35,8 +35,6 @@ class LogInController: UIViewController {
 //        ref.child("userid").observeSingleEvent(of: .value)
 //        { (snapshot) in
 //            let name = snapshot.value as? String
-        
-        
 //        } Asi puedo leer los valores de la DB
     }
 
@@ -91,5 +89,4 @@ extension UITextField {
         }
     }
 }
-
 
