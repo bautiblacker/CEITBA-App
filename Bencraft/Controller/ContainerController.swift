@@ -23,6 +23,14 @@ class ContainerController: UIViewController {
         return .lightContent
     }
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isExpanded
+    }
+    
     func configureDefaultController() {
         let defaultController = BeneficiosController()
         defaultController.delegate = self
@@ -55,16 +63,14 @@ class ContainerController: UIViewController {
             // Esconder el Menu
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = 0
             }) { (_) in
                 guard let menuOption = menuOption else { return }
                 self.didSelectMenuOption(menuOption: menuOption)
             }
         }
+        
+        animatedStatusBar()
     }
     
     func didSelectMenuOption(menuOption: MenuOption) {
@@ -96,6 +102,12 @@ class ContainerController: UIViewController {
         case .LogOut:
             print("LogOut")
         }
+    }
+    
+    func animatedStatusBar() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }, completion: nil)
     }
 }
 
