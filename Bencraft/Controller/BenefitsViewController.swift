@@ -33,6 +33,15 @@ class BenefitsViewController: UIViewController {
         collectionView.delegate = self
         
     }
+    @IBAction func showBenefitInfo(_ sender: UIButton) {
+        sender.backgroundColor = UIColor.blue
+    }
+    
+//    @IBAction func featuredButton(_sender: UIButton) {
+//        
+//        information.isHidden = !information.isHidden
+//        infoView.isHidden = !infoView.isHidden
+//    }
 }
 
 extension BenefitsViewController : UICollectionViewDataSource {

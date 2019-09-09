@@ -18,7 +18,7 @@ class Food: Benefits {
     
     static func fetchBenefits() -> [Food] {
         return [
-            Food(description: "McDonalds Cuarto de Libra", featuredImage: UIImage(named: "McDonalds1")!),
+            Food(description: "McDonalds Cuarto de Libra", featuredImage: UIImage(named: "Image")!),
             Food(description: "McDonalds Combo", featuredImage: UIImage(named: "McDonalds2")!),
             Food(description: "Dandy", featuredImage: UIImage(named: "Dandy")!),
             Food(description: "BaguetteCo", featuredImage: UIImage(named: "BaguetteCo")!),
