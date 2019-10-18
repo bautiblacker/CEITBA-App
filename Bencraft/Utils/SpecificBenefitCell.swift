@@ -15,7 +15,7 @@ class SpecificBenefitCell: UICollectionViewCell {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var information: UILabel!
     
-    var benefit: Food? {
+    var benefit: Benefits? {
         didSet {
             self.updateUI()
         }

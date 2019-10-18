@@ -12,7 +12,7 @@ class BenefitsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var benefits = Food.fetchBenefits()
+    var benefits : [Benefits] = Sports.fetchBenefits()
     let cellScaling: CGFloat = 0.6
     
     override func viewDidLoad() {
@@ -41,6 +41,10 @@ class BenefitsViewController: UIViewController {
 //        
 //        information.isHidden = !information.isHidden
 //        infoView.isHidden = !infoView.isHidden
+//    }
+    
+//    func setBenefit(type: Benefits) {
+//        benefits = type.fetchBenefits();
 //    }
 }
 

@@ -15,15 +15,15 @@ class Sports: Benefits {
         super.init(description: description, featuredImage: featuredImage)
     }
     
-    static func fetchBenefits() -> [Sports] {
+    override func fetchBenefits() -> [Benefits] {
         return [
-            Sports(description: "McDonalds Cuarto de Libra", featuredImage: UIImage(named: "McDonalds1")!),
-            Sports(description: "McDonalds Combo", featuredImage: UIImage(named: "McDonalds2")!),
-            Sports(description: "Dandy", featuredImage: UIImage(named: "Dandy")!),
-            Sports(description: "BaguetteCo", featuredImage: UIImage(named: "BaguetteCo")!),
-            Sports(description: "Fridays!", featuredImage: UIImage(named: "Fridays-1")!),
-            Sports(description: "Central Market", featuredImage: UIImage(named: "central-market")!),
-            Sports(description: "Lolea", featuredImage: UIImage(named: "LOLEA-1")!),
+            Sports(description: "Tenis", featuredImage: UIImage(named: "tenis")!),
+            Sports(description: "Futbol Masculino", featuredImage: UIImage(named: "futbol")!),
+            Sports(description: "Futbol Femenino", featuredImage: UIImage(named: "futbol-fem")!),
+            Sports(description: "Basquet Masculino", featuredImage: UIImage(named: "basquet-mas")!),
+            Sports(description: "Hockey Femenino", featuredImage: UIImage(named: "hockey-fem")!),
+            Sports(description: "Natacion", featuredImage: UIImage(named: "natacion")!),
+            Sports(description: "Voley", featuredImage: UIImage(named: "voley")!),
         ]
     }
-}
+} 

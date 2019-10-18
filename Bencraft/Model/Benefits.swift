@@ -16,4 +16,8 @@ class Benefits {
         self.description = description
         self.featuredImage = featuredImage
     }
+    
+    func fetchBenefits() -> [Benefits] {
+        return [];
+    }
 }
