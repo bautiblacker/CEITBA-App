@@ -1,8 +1,8 @@
 //
-//  BeneficiosEspecificosController.swift
+//  BenefitsViewController.swift
 //  Bencraft
 //
-//  Created by Martin Craviotto on 9/3/19.
+//  Created by Martin Craviotto on 10/29/19.
 //  Copyright © 2019 Martin Craviotto. All rights reserved.
 //
 
@@ -92,5 +92,3 @@ extension BenefitsViewController : UIScrollViewDelegate, UICollectionViewDelegat
         targetContentOffset.pointee = offset
     }
 }
-
-
