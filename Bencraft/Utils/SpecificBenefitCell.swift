@@ -9,23 +9,29 @@
 import UIKit
 
 class SpecificBenefitCell: UICollectionViewCell {
-    @IBOutlet weak var featuredImageView: UIImageView!
-    @IBOutlet weak var benefitDescription: UILabel!
     
-    var benefit: Benefit? {
+    @IBOutlet weak var featuredButton: UIButton!
+//    @IBOutlet weak var benefitDescription: UILabel!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var information: UILabel!
+    
+    var benefit: Benefits? {
         didSet {
             self.updateUI()
         }
     }
     
+    
     fileprivate func updateUI() {
         if let benefit = benefit {
-            featuredImageView.image = benefit.featuredImage
-            benefitDescription.text = benefit.description
+            featuredButton.setImage(benefit.featuredImage, for: UIControl.State.normal)
+            infoView.isHidden = true
+            information.isHidden = true
+//            benefitDescription.text = benefit.description
             
         } else {
-            featuredImageView.image = nil
-            benefitDescription.text = nil
+            featuredButton.setImage(nil, for: UIControl.State.normal)
+//            benefitDescription.text = nil
         }
     }
     
@@ -36,7 +42,7 @@ class SpecificBenefitCell: UICollectionViewCell {
         layer.shadowRadius = 10
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 5, height: 10)
-        self.clipsToBounds = false
+        self.clipsToBounds = true
     }
     
 }
