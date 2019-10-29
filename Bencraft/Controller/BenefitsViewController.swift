@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class BenefitsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var benefits : [Benefits] = Sports.fetchBenefits()
+    var benefits : [Sports] = Sports.fetchBenefits()
     let cellScaling: CGFloat = 0.6
     
     override func viewDidLoad() {
@@ -32,7 +33,35 @@ class BenefitsViewController: UIViewController {
         collectionView?.dataSource = self
         collectionView.delegate = self
         
-    }
+        var docRef: DocumentReference!
+        docRef = Firestore.firestore().collection("deportes").document("basquet")
+        docRef.getDocument { (docSnapshot, err) in
+            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+            let myData = docSnapshot.data()
+            let sport = myData?["descripcion"] as? String ?? ""
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+//        FirebaseApp.configure()
+//        let db = Firestore.firestore()
+//        db.collection("deportes").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        }
+    
     @IBAction func showBenefitInfo(_ sender: UIButton) {
         sender.backgroundColor = UIColor.blue
     }
@@ -60,7 +89,7 @@ extension BenefitsViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "benefitCell", for: indexPath) as! SpecificBenefitCell
         
-        cell.benefit = benefits[indexPath.item]
+        // cell.benefit = benefits[indexPath.item]
         cell.backgroundColor = UIColor.white
         
         return cell

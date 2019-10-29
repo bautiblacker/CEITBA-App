@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Benefits {
     var description = ""
@@ -20,4 +21,25 @@ class Benefits {
     func fetchBenefits() -> [Benefits] {
         return [];
     }
+    
+//    var docRef: DocumentReference!
+//    func setBenefit(type: String) {
+//        FirebaseApp.configure()
+//        let db = Firestore.firestore()
+//        db.collection(type).getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+        
+        
+    //}
+    
+    
+    
+    
 }

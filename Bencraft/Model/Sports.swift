@@ -7,15 +7,19 @@
 
 import UIKit
 
-class Sports: Benefits {
+class Sports {
     
     let title = "Sports"
+    var description = ""
+    var featuredImage: UIImage
     
-    override init(description: String, featuredImage: UIImage) {
-        super.init(description: description, featuredImage: featuredImage)
+     init(description: String, featuredImage: UIImage) {
+        //super.init(description: description, featuredImage: featuredImage)
+        self.description = description
+        self.featuredImage = featuredImage
     }
     
-    override func fetchBenefits() -> [Benefits] {
+    static func fetchBenefits() -> [Sports] {
         return [
             Sports(description: "Tenis", featuredImage: UIImage(named: "tenis")!),
             Sports(description: "Futbol Masculino", featuredImage: UIImage(named: "futbol")!),
