@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
+@available(iOS 13.0, *)
 class LogInController: UIViewController {
     
     @IBOutlet weak var txtUser: UITextField!{
@@ -49,10 +50,11 @@ class LogInController: UIViewController {
             let login = password == self.txtPassword.text
             print("El resultado es: \(login)")
             if login {
-                let defaultView = ContainerController()
-                self.present(defaultView, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "LogInSuccessfully", sender: self)
+//                let defaultView = self.storyboard?.instantiateViewController(identifier: "default") as! DefaultController
+//                self.navigationController?.pushViewController(defaultView, animated: true)
             } else {
-                self.invalidLogIn()
+//                self.invalidLogIn()
             }
         }
     }
