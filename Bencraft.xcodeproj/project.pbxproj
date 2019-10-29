@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		42BA840F231E05EA008B7872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42BA840E231E05EA008B7872 /* GoogleService-Info.plist */; };
-		42BA8411231EAC14008B7872 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8410231EAC14008B7872 /* ContainerController.swift */; };
-		42BA8416231EAC46008B7872 /* BeneficiosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8415231EAC46008B7872 /* BeneficiosController.swift */; };
-		42BA8419231EAC60008B7872 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8418231EAC60008B7872 /* MenuController.swift */; };
 		42BA841E231EB32A008B7872 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841D231EB32A008B7872 /* Protocols.swift */; };
 		42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841F231EBE62008B7872 /* MenuOptionCell.swift */; };
 		42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8421231ECB88008B7872 /* MenuOption.swift */; };
 		42BA8427231EE7FD008B7872 /* BenefitOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8426231EE7FD008B7872 /* BenefitOption.swift */; };
-		42BA8429231EFBC0008B7872 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8428231EFBC0008B7872 /* BenefitsViewController.swift */; };
+		42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D733FC2367FB8F00222663 /* DefaultViewController.swift */; };
+		42D733FF236820BE00222663 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D733FE236820BE00222663 /* BenefitsViewController.swift */; };
 		42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */; };
 		42EFE4F12319AA1400FC79D8 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4F02319AA1400FC79D8 /* LogInController.swift */; };
 		42EFE4F42319AA1400FC79D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F22319AA1400FC79D8 /* Main.storyboard */; };
@@ -42,14 +40,12 @@
 
 /* Begin PBXFileReference section */
 		42BA840E231E05EA008B7872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		42BA8410231EAC14008B7872 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
-		42BA8415231EAC46008B7872 /* BeneficiosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiosController.swift; sourceTree = "<group>"; };
-		42BA8418231EAC60008B7872 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		42BA841D231EB32A008B7872 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		42BA841F231EBE62008B7872 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		42BA8421231ECB88008B7872 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 		42BA8426231EE7FD008B7872 /* BenefitOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitOption.swift; sourceTree = "<group>"; };
-		42BA8428231EFBC0008B7872 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
+		42D733FC2367FB8F00222663 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		42D733FE236820BE00222663 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		42EFE4EB2319AA1400FC79D8 /* Bencraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bencraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42EFE4F02319AA1400FC79D8 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -92,10 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				42EFE4F02319AA1400FC79D8 /* LogInController.swift */,
-				42BA8410231EAC14008B7872 /* ContainerController.swift */,
-				42BA8415231EAC46008B7872 /* BeneficiosController.swift */,
-				42BA8418231EAC60008B7872 /* MenuController.swift */,
-				42BA8428231EFBC0008B7872 /* BenefitsViewController.swift */,
+				42D733FC2367FB8F00222663 /* DefaultViewController.swift */,
+				42D733FE236820BE00222663 /* BenefitsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,9 +328,9 @@
 			files = (
 				42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */,
 				42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */,
-				42BA8419231EAC60008B7872 /* MenuController.swift in Sources */,
 				4351665C23255834008C11C4 /* Benefits.swift in Sources */,
 				42BA8416231EAC46008B7872 /* BeneficiosController.swift in Sources */,
+				42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */,
 				42EFE4F12319AA1400FC79D8 /* LogInController.swift in Sources */,
 				4323DE95232312BB002C5E8D /* Food.swift in Sources */,
 				42BA8427231EE7FD008B7872 /* BenefitOption.swift in Sources */,
@@ -344,7 +338,6 @@
 				4351665A232557F8008C11C4 /* Sports.swift in Sources */,
 				42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */,
 				42BA8429231EFBC0008B7872 /* BenefitsViewController.swift in Sources */,
-				42BA8411231EAC14008B7872 /* ContainerController.swift in Sources */,
 				4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */,
 				439C9F3423591B45002A5C6D /* OtherBenefits.swift in Sources */,
 			);
