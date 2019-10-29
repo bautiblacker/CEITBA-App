@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DefaultViewController: UIViewController {
     
-    var legajo: String?
+    var legajo: String!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let legajo = legajo {
             print("El legajo es \(legajo)")
+            loadName()
         } else {
             print("No hay legajo!")
         }
@@ -31,11 +35,20 @@ class DefaultViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? BenefitsViewController {
+            destination.category = segue.identifier
+        }
         
-//        if let destination = segue.destination as? SeleccionModoDeJuegoView {
-//            destination.jugadores = players
-//            destination.cantPlayers = cantPlayers
-//        }
+    }
+    
+    func loadName() {
+        let ref = Database.database().reference()
+        let string = "usuarios/\(legajo ?? "")/nombre"
         
+        ref.child(string).observeSingleEvent(of: .value)
+        { (snapshot) in
+            let nombre = snapshot.value as! String
+            self.nameLabel.text = nombre
+        }
     }
 }

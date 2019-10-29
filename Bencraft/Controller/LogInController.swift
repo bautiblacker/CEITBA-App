@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 class LogInController: UIViewController {
     
+    var legajo: String?
+    
     @IBOutlet weak var txtUser: UITextField!{
         didSet {
             txtUser.setIcon(#imageLiteral(resourceName: "user-icon"), #imageLiteral(resourceName: "separator-icon") )
@@ -32,7 +34,7 @@ class LogInController: UIViewController {
     
     func validateAccount() {
         let ref = Database.database().reference()
-        let legajo = txtUser.text
+        legajo = txtUser.text
         let string = "usuarios/\(legajo ?? "")/contraseña"
         print("Legajo: \(legajo ?? "")")
         print("Contraseña ingresada: \(txtPassword.text ?? "")")
@@ -62,6 +64,12 @@ class LogInController: UIViewController {
                     validateAccount()
                 }
         return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DefaultViewController {
+            destination.legajo = legajo
+        }
     }
 }
 
