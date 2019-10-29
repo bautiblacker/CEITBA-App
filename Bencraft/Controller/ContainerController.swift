@@ -32,7 +32,7 @@ class ContainerController: UIViewController {
     }
     
     func configureDefaultController() {
-        let defaultController = BeneficiosController()
+        let defaultController = BeneficiosEspecificosController()
         defaultController.delegate = self
         centerController = UINavigationController(rootViewController: defaultController)
         
@@ -79,6 +79,8 @@ class ContainerController: UIViewController {
             print("Perfil")
         case .Actividades:
             print("Actividades")
+            let activitiesController = ActivitiesController()
+            present(UINavigationController(rootViewController: activitiesController), animated: true, completion: nil)
         case .Beneficios:
             print("Beneficios")
         case .Cursos:
