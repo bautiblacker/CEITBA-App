@@ -456,7 +456,7 @@
         <scene sceneID="q68-ZX-HF5">
             <objects>
                 <viewController storyboardIdentifier="sectionTitle" id="Zbl-AY-pES" userLabel="Specific Beneficios View" customClass="BenefitsViewController" customModule="Bencraft" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nKi-G7-wIh" customClass="BenefitsViewC">
+                    <view key="view" contentMode="scaleToFill" id="nKi-G7-wIh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -486,7 +486,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="benefitCell" id="4Db-zx-9oT" customClass="SpecificBenefitCell" customModule="Bencraft" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="12.5" width="350" height="600"/>
+                                        <rect key="frame" x="0.0" y="12.666666666666666" width="350" height="600"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>

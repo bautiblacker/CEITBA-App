@@ -16,7 +16,7 @@ class BenefitsViewController: UIViewController {
     var benefits : [Benefits] = []
     let cellScaling: CGFloat = 0.6
     
-    let category:String = "comida"
+    var category:String? // = "comida"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class BenefitsViewController: UIViewController {
     
     func getBenefits() {
         let ref = Database.database().reference()
-        let string = "\(category )/"
+        let string = "\(category ?? "")/"
         
         ref.child(string).observeSingleEvent(of: .value) { (snapshot) in
             let benefit = snapshot.value as! [String:AnyObject]
