@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseCore
+import FirebaseFirestore
 
 class LogInController: UIViewController {
+    var db: Firestore!
     
     @IBOutlet weak var txtUser: UITextField!{
         didSet {
@@ -26,6 +29,7 @@ class LogInController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
 
         
@@ -36,8 +40,17 @@ class LogInController: UIViewController {
 //        { (snapshot) in
 //            let name = snapshot.value as? String
 //        } Asi puedo leer los valores de la DB
-    }
+        
+        // [START setup]
+               let settings = FirestoreSettings()
 
+               Firestore.firestore().settings = settings
+               // [END setup]
+               db = Firestore.firestore()
+               
+               
+        
+    }
 
 }
 
