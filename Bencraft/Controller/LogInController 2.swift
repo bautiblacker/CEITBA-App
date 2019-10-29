@@ -30,7 +30,12 @@ class LogInController: UIViewController {
 
     }
     
+    @IBAction func logInAttempt(_ sender: UIButton) {
+        validateAccount()
+    }
+    
     func validateAccount() {
+
         let ref = Database.database().reference()
         let legajo = txtUser.text
         let string = "usuarios/\(legajo ?? "")/contraseña"
@@ -44,7 +49,8 @@ class LogInController: UIViewController {
             let login = password == self.txtPassword.text
             print("El resultado es: \(login)")
             if login {
-                self.performSegue(withIdentifier: "LogInSuccessfully", sender: self)
+                let defaultView = ContainerController()
+                self.present(defaultView, animated: true, completion: nil)
             } else {
                 self.invalidLogIn()
             }
@@ -55,13 +61,6 @@ class LogInController: UIViewController {
         let alert = UIAlertController(title: "Los datos ingresados son incorrectos.", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-                if identifier == "LogInSuccessfully" {
-                    validateAccount()
-                }
-        return false
     }
 }
 
