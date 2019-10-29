@@ -10,8 +10,10 @@ import UIKit
 
 class SpecificBenefitCell: UICollectionViewCell {
     
-    @IBOutlet weak var featuredButton: UIButton!
+//    @IBOutlet weak var featuredButton: UIButton!
+        
 //    @IBOutlet weak var benefitDescription: UILabel!
+    @IBOutlet weak var featuredImageView: UIImageView!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var information: UILabel!
     
@@ -24,14 +26,12 @@ class SpecificBenefitCell: UICollectionViewCell {
     
     fileprivate func updateUI() {
         if let benefit = benefit {
-            featuredButton.setImage(benefit.featuredImage, for: UIControl.State.normal)
-            infoView.isHidden = true
-            information.isHidden = true
+            featuredImageView.image = benefit.featuredImage
 //            benefitDescription.text = benefit.description
-            
         } else {
-            featuredButton.setImage(nil, for: UIControl.State.normal)
+            featuredImageView.image = nil
 //            benefitDescription.text = nil
+            
         }
     }
     
