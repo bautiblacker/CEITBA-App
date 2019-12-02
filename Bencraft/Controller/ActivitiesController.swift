@@ -18,7 +18,7 @@ class ActivitiesController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayLbl.text = ""
+        //displayLbl.text = ""
 
         // [START setup]
         let settings = FirestoreSettings()
@@ -48,7 +48,7 @@ class ActivitiesController : UIViewController {
                         let nombre = document.get("nombre") as? String ?? ""
                         let descripcion = document.get("Descripcion") as? String ?? ""
                        print(nombre)
-                        self.displayLbl.text = "\(nombre)"
+                        //self.displayLbl.text = "\(nombre)"
                         print(descripcion)
                         }
                 
