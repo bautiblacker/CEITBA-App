@@ -111,9 +111,9 @@
                                 <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-Lp-M6R">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-Lp-M6R">
                                 <rect key="frame" x="235" y="493.66666666666669" width="51" height="31.000000000000057"/>
-                                <color key="onTintColor" red="0.69045764207839966" green="0.74461454153060913" blue="0.77255517244338989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="onTintColor" red="0.21517028829965504" green="0.77255517244338989" blue="0.22214645391907742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="thumbTintColor" red="0.92555379867553711" green="0.93711215257644653" blue="0.94510024785995483" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nES-ms-CZy">
@@ -179,6 +179,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3R7-x6-BcL"/>
                     <connections>
+                        <outlet property="rememberSwitch" destination="B0M-Lp-M6R" id="VxQ-w2-sHG"/>
                         <outlet property="txtPassword" destination="EFk-YZ-M8q" id="T3V-qJ-rxQ"/>
                         <outlet property="txtUser" destination="dI1-1j-FIh" id="HRB-hR-Lg1"/>
                     </connections>
@@ -195,7 +196,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-4B-kiR">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-4B-kiR">
                                 <rect key="frame" x="36" y="10" width="32" height="32"/>
                                 <state key="normal" image="icons8-menu-32"/>
                             </button>
@@ -245,7 +246,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="87m-CO-alJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ySG-CK-geX"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEITBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-Cz-y4j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CEITBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-Cz-y4j">
                                 <rect key="frame" x="159" y="9" width="97" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.024686902760000001" green="0.067220740020000003" blue="0.31235864759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

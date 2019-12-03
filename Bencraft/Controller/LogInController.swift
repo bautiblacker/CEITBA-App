@@ -25,11 +25,38 @@ class LogInController: UIViewController {
             
         }
     }
+    @IBOutlet weak var rememberSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         rememberSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
+                let defaults: UserDefaults? = UserDefaults.standard
+
+        // check if defaults already saved the details
+
+        if defaults?.bool(forKey: "ISRemember") ?? false {
+            txtUser.text = defaults?.value(forKey: "SavedUserName") as? String
+            txtPassword.text = defaults?.value(forKey: "SavedPassword") as? String
+            rememberSwitch.setOn(true, animated: false)
+            self.shouldPerformSegue(withIdentifier: "LogInSuccessfully", sender: self)
+        } else {
+            rememberSwitch.setOn(false, animated: false)
+        }
         // Do any additional setup after loading the view.
 
+    }
+    
+    @objc func stateChanged(_ switchState: UISwitch) {
+
+    let defaults: UserDefaults? = UserDefaults.standard
+        if switchState.isOn {
+        defaults?.set(true, forKey: "ISRemember")
+        defaults?.set(txtUser.text, forKey: "SavedUserName")
+        defaults?.set(txtPassword.text, forKey: "SavedPassword")
+    }
+    else {
+        defaults?.set(false, forKey: "ISRemember")
+        }
     }
     
     func validateAccount() {
