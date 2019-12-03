@@ -12,6 +12,9 @@ import FirebaseDatabase
 class LogInController: UIViewController {
     
     var legajo: String?
+    @IBAction func createAccount(_ sender: Any) {
+        performSegue(withIdentifier: "createAccountSegue", sender: self)
+    }
     
     @IBOutlet weak var txtUser: UITextField!{
         didSet {
