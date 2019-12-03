@@ -107,11 +107,22 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - leveldb-library (1.22)
+<<<<<<< HEAD
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+=======
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
+  - PromisesObjC (1.2.8)
+  - PromisesSwift (1.2.8):
+    - PromisesObjC (= 1.2.8)
+>>>>>>> activities controller
   - Protobuf (3.10.0)
 
 DEPENDENCIES:
@@ -119,6 +130,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Firestore
+  - PromisesSwift
 
 SPEC REPOS:
   trunk:
@@ -140,6 +152,8 @@ SPEC REPOS:
     - gRPC-Core
     - leveldb-library
     - nanopb
+    - PromisesObjC
+    - PromisesSwift
     - Protobuf
 
 SPEC CHECKSUMS:
@@ -160,9 +174,18 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+<<<<<<< HEAD
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
 PODFILE CHECKSUM: 0ee6a4c390302bd0730929adf0ec0c59a797492f
+=======
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
+  Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+
+PODFILE CHECKSUM: 6bf26f23c0de0417833ff64e084da851c1d34bd0
+>>>>>>> activities controller
 
 COCOAPODS: 1.8.4

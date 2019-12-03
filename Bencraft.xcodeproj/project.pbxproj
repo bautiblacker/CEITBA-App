@@ -19,11 +19,18 @@
 		42EFE4F42319AA1400FC79D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F22319AA1400FC79D8 /* Main.storyboard */; };
 		42EFE4F62319AA1400FC79D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F52319AA1400FC79D8 /* Assets.xcassets */; };
 		42EFE4F92319AA1400FC79D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F72319AA1400FC79D8 /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
 		42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D733FE236820BE00222663 /* BenefitsViewController.swift */; };
 		4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323DE96232313D6002C5E8D /* SpecificBenefitCell.swift */; };
 		4351665C23255834008C11C4 /* Benefits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351665B23255834008C11C4 /* Benefits.swift */; };
 		43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */; };
 		76D8A456398A43FF33810EB3 /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */; };
+=======
+		468F6C922367FC92000FDDE0 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F6C912367FC92000FDDE0 /* Activities.swift */; };
+		468F6C942368042C000FDDE0 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F6C932368042C000FDDE0 /* ActivitiesController.swift */; };
+		46FD804C2396FEE90009243B /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD804B2396FEE90009243B /* Usuarios.swift */; };
+		A72EAC580DFCF2C6385F48BE /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D301B3F9B25E80520F83CF /* Pods_Bencraft.framework */; };
+>>>>>>> activities controller
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,7 @@
 		42EFE4F52319AA1400FC79D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42EFE4F82319AA1400FC79D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42EFE4FA2319AA1400FC79D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4323DE96232313D6002C5E8D /* SpecificBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBenefitCell.swift; sourceTree = "<group>"; };
 		4351665B23255834008C11C4 /* Benefits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefits.swift; sourceTree = "<group>"; };
 		43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,14 @@
 		51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bencraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7376AEEB5E162B09E985C2 /* Pods-Bencraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.release.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.release.xcconfig"; sourceTree = "<group>"; };
+=======
+		468F6C912367FC92000FDDE0 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		468F6C932368042C000FDDE0 /* ActivitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
+		46FD804B2396FEE90009243B /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		A88D6F582E40AE3937A2D477 /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
+		BB804D54BCCD87F65C471C25 /* Pods-Bencraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.release.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.release.xcconfig"; sourceTree = "<group>"; };
+		E9D301B3F9B25E80520F83CF /* Pods_Bencraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bencraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> activities controller
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +122,12 @@
 			children = (
 				42BA8421231ECB88008B7872 /* MenuOption.swift */,
 				42BA8426231EE7FD008B7872 /* BenefitOption.swift */,
+<<<<<<< HEAD
 				4351665B23255834008C11C4 /* Benefits.swift */,
+=======
+				468F6C912367FC92000FDDE0 /* Activities.swift */,
+				46FD804B2396FEE90009243B /* Usuarios.swift */,
+>>>>>>> activities controller
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +353,7 @@
 				42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */,
 				42BA841E231EB32A008B7872 /* Protocols.swift in Sources */,
 				42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
 				4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+=======
+				46FD804C2396FEE90009243B /* Usuarios.swift in Sources */,
+				42BA8429231EFBC0008B7872 /* BeneficiosEspecificosController.swift in Sources */,
+				468F6C922367FC92000FDDE0 /* Activities.swift in Sources */,
+				468F6C942368042C000FDDE0 /* ActivitiesController.swift in Sources */,
+				42BA8411231EAC14008B7872 /* ContainerController.swift in Sources */,
+>>>>>>> activities controller
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

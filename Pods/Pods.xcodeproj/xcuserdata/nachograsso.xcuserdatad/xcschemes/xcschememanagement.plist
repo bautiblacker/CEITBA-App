@@ -149,11 +149,16 @@
 			<key>orderHint</key>
 			<integer>19</integer>
 		</dict>
+<<<<<<< HEAD
 		<key>Pods-Bencraft.xcscheme_^#shared#^_</key>
+=======
+		<key>PromisesObjC.xcscheme</key>
+>>>>>>> activities controller
 		<dict>
 			<key>orderHint</key>
 			<integer>20</integer>
 		</dict>
+<<<<<<< HEAD
 		<key>PromisesObjC.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -161,11 +166,18 @@
 		</dict>
 		<key>PromisesSwift.xcscheme</key>
 		<dict>
+=======
+		<key>PromisesSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+>>>>>>> activities controller
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
 		<key>Protobuf.xcscheme</key>
 		<dict>
+<<<<<<< HEAD
 			<key>orderHint</key>
 			<integer>22</integer>
 		</dict>
@@ -174,6 +186,13 @@
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
+=======
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
+>>>>>>> activities controller
 		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>

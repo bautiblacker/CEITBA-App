@@ -11,4 +11,10 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
+<<<<<<< HEAD
+=======
+
+pod 'PromisesSwift'
+
+>>>>>>> activities controller
 end
