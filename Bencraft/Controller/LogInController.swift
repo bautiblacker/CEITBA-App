@@ -46,8 +46,20 @@ class LogInController: UIViewController {
             rememberSwitch.setOn(false, animated: false)
         }
         // Do any additional setup after loading the view.
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
+        view.addGestureRecognizer(tapGesture)
 
     }
+    
+    @objc func endEditing() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func didEndOnExit(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
     
     @objc func stateChanged(_ switchState: UISwitch) {
 
@@ -60,6 +72,9 @@ class LogInController: UIViewController {
     else {
         defaults?.set(false, forKey: "isRemembered")
         }
+    }
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        performSegue(withIdentifier: "ForgotPassword", sender: self)
     }
     
     func validateAccount() {
@@ -83,6 +98,21 @@ class LogInController: UIViewController {
         }
     }
     
+    func checkUserAvailable() {
+        let ref = Database.database().reference()
+        legajo = txtUser.text
+        print("Los usuarios registrados son los siguientes: ")
+        ref.child("usuarios_registrados").observeSingleEvent(of: .value) {
+            (snapshot) in
+            let users = snapshot.value as! Array<String>
+            if (users.contains(self.legajo!)) {
+                self.validateAccount()
+                return
+            }
+            self.invalidLogIn()
+        }
+    }
+    
     func invalidLogIn() {
         let alert = UIAlertController(title: "Los datos ingresados son incorrectos.", message: "", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: nil))
@@ -91,7 +121,7 @@ class LogInController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
                 if identifier == "LogInSuccessfully" {
-                    validateAccount()
+                    checkUserAvailable()
                 }
         return false
     }
