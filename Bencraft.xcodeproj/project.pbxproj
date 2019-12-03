@@ -13,6 +13,7 @@
 		42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8421231ECB88008B7872 /* MenuOption.swift */; };
 		42BA8427231EE7FD008B7872 /* BenefitOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8426231EE7FD008B7872 /* BenefitOption.swift */; };
 		42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D733FC2367FB8F00222663 /* DefaultViewController.swift */; };
+		42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D8F43D239708AB009F833B /* ForgotPasswordController.swift */; };
 		42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */; };
 		42EFE4F12319AA1400FC79D8 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFE4F02319AA1400FC79D8 /* LogInController.swift */; };
 		42EFE4F42319AA1400FC79D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EFE4F22319AA1400FC79D8 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		42BA8426231EE7FD008B7872 /* BenefitOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitOption.swift; sourceTree = "<group>"; };
 		42D733FC2367FB8F00222663 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		42D733FE236820BE00222663 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
+		42D8F43D239708AB009F833B /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		42EFE4EB2319AA1400FC79D8 /* Bencraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bencraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EFE4EE2319AA1400FC79D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42EFE4F02319AA1400FC79D8 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				42EFE4F02319AA1400FC79D8 /* LogInController.swift */,
 				42D733FC2367FB8F00222663 /* DefaultViewController.swift */,
 				42D733FE236820BE00222663 /* BenefitsViewController.swift */,
+				42D8F43D239708AB009F833B /* ForgotPasswordController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */,
 				42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */,
 				4351665C23255834008C11C4 /* Benefits.swift in Sources */,
+				42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */,
 				42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */,
 				42EFE4F12319AA1400FC79D8 /* LogInController.swift in Sources */,
 				42BA8427231EE7FD008B7872 /* BenefitOption.swift in Sources */,
@@ -489,7 +493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QSD7J9BS4C;
 				INFOPLIST_FILE = Bencraft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,7 +516,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QSD7J9BS4C;
 				INFOPLIST_FILE = Bencraft/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
