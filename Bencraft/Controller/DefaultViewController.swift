@@ -14,10 +14,14 @@ class DefaultViewController: UIViewController {
     var legajo: String!
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logOutButton: UIButton! {
+        didSet {
+            logOutButton.addTarget(LogInController(), action: #selector(changeStatus), for: UIControl.Event.touchUpInside)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let legajo = legajo {
             print("El legajo es \(legajo)")
             loadName()
@@ -26,6 +30,11 @@ class DefaultViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func changeStatus() {
+        let defaults: UserDefaults? = UserDefaults.standard
+        defaults?.set(false, forKey: "isRemembered")
     }
     
 
