@@ -12,6 +12,7 @@ import FirebaseDatabase
 class BenefitsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var benefitLabel: UILabel!
     
     var benefits : [Benefits] = []
     let cellScaling: CGFloat = 0.6
@@ -45,6 +46,7 @@ class BenefitsViewController: UIViewController {
     
     func getBenefits() {
         let ref = Database.database().reference()
+        benefitLabel.text = "\(category ?? "")".uppercased();
         let string = "\(category ?? "")/"
         
         ref.child(string).observeSingleEvent(of: .value) { (snapshot) in
@@ -84,7 +86,7 @@ extension BenefitsViewController : UIScrollViewDelegate, UICollectionViewDelegat
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity
         velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        let cellWidthIncludingSpacing = 3*layout.itemSize.width + layout.minimumLineSpacing
         var offset = targetContentOffset.pointee
         let index = round((offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing) /*index*/
         

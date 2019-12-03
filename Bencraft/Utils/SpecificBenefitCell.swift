@@ -41,7 +41,7 @@ class SpecificBenefitCell: UICollectionViewCell {
         self.layer.cornerRadius = 3.0
         layer.shadowRadius = 10
         layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize(width: 5, height: 10)
+        layer.shadowOffset = CGSize(width: 10, height: 10)
         self.clipsToBounds = true
     }
     

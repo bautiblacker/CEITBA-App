@@ -460,8 +460,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-2I-yTG">
-                                <rect key="frame" x="18" y="31" width="184" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Beneficios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-2I-yTG">
+                                <rect key="frame" x="18" y="31" width="238" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -479,27 +479,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tfw-r9-WlF">
-                                    <size key="itemSize" width="350" height="600"/>
+                                    <size key="itemSize" width="350" height="581"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="benefitCell" id="4Db-zx-9oT" customClass="SpecificBenefitCell" customModule="Bencraft" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="12.666666666666666" width="350" height="600"/>
+                                        <rect key="frame" x="0.0" y="22" width="350" height="581"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="581"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Sb-TD-bIT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="McDonalds2" translatesAutoresizingMaskIntoConstraints="NO" id="7Sb-TD-bIT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="561"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="ultraLight"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="350" height="600"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="350" height="581"/>
                                         <connections>
                                             <outlet property="featuredImageView" destination="7Sb-TD-bIT" id="f4B-6O-gjW"/>
                                         </connections>
@@ -516,7 +518,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.89660353116710878" green="0.89660353116710878" blue="0.89660353116710878" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ddy-wo-G2P" firstAttribute="trailing" secondItem="Pds-2I-yTG" secondAttribute="trailing" constant="212" id="50l-Xg-tu4"/>
+                            <constraint firstItem="ddy-wo-G2P" firstAttribute="trailing" secondItem="Pds-2I-yTG" secondAttribute="trailing" constant="150" id="50l-Xg-tu4"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="top" secondItem="Pds-2I-yTG" secondAttribute="bottom" constant="8" id="B9d-Rh-7Ne"/>
                             <constraint firstItem="Pds-2I-yTG" firstAttribute="leading" secondItem="ddy-wo-G2P" secondAttribute="leading" constant="18" id="DM4-FU-CL5"/>
                             <constraint firstItem="uny-Mb-FCU" firstAttribute="leading" secondItem="nKi-G7-wIh" secondAttribute="leadingMargin" id="ESw-h3-wIt"/>
@@ -532,6 +534,7 @@
                         <viewLayoutGuide key="safeArea" id="ddy-wo-G2P"/>
                     </view>
                     <connections>
+                        <outlet property="benefitLabel" destination="Pds-2I-yTG" id="BP4-ta-SX0"/>
                         <outlet property="collectionView" destination="ykc-69-KB4" id="PZy-cn-MtR"/>
                     </connections>
                 </viewController>
@@ -541,6 +544,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="McDonalds2" width="384" height="480"/>
         <image name="icons8-crying-100" width="100" height="100"/>
         <image name="icons8-menu-32" width="32" height="32"/>
         <image name="power" catalog="system" width="64" height="62"/>
