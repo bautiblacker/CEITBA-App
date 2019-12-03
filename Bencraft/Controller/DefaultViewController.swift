@@ -17,6 +17,8 @@ class DefaultViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton! {
         didSet {
             logOutButton.addTarget(LogInController(), action: #selector(changeStatus), for: UIControl.Event.touchUpInside)
+            let defaults:UserDefaults = UserDefaults.standard
+            defaults.set(false, forKey: "isRemembered")
         }
     }
     

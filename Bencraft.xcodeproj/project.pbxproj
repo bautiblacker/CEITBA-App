@@ -22,6 +22,7 @@
 		42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D733FE236820BE00222663 /* BenefitsViewController.swift */; };
 		4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323DE96232313D6002C5E8D /* SpecificBenefitCell.swift */; };
 		4351665C23255834008C11C4 /* Benefits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351665B23255834008C11C4 /* Benefits.swift */; };
+		43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */; };
 		76D8A456398A43FF33810EB3 /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		42EFE4FA2319AA1400FC79D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4323DE96232313D6002C5E8D /* SpecificBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificBenefitCell.swift; sourceTree = "<group>"; };
 		4351665B23255834008C11C4 /* Benefits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefits.swift; sourceTree = "<group>"; };
+		43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		43C9D0402352839600631DDA /* BencraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BencraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C9D04E2352885700631DDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				42D733FC2367FB8F00222663 /* DefaultViewController.swift */,
 				42D733FE236820BE00222663 /* BenefitsViewController.swift */,
 				42D8F43D239708AB009F833B /* ForgotPasswordController.swift */,
+				43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */,
 				42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */,
+				43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */,
 				4351665C23255834008C11C4 /* Benefits.swift in Sources */,
 				42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */,
 				42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */,
