@@ -30,11 +30,11 @@ class LogInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          rememberSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
-                let defaults: UserDefaults? = UserDefaults.standard
+         let defaults: UserDefaults? = UserDefaults.standard
 
         // check if defaults already saved the details
 
-        if defaults?.bool(forKey: "ISRemember") ?? false {
+        if defaults?.bool(forKey: "isRemembered") ?? false {
             txtUser.text = defaults?.value(forKey: "SavedUserName") as? String
             txtPassword.text = defaults?.value(forKey: "SavedPassword") as? String
             rememberSwitch.setOn(true, animated: false)
@@ -50,12 +50,12 @@ class LogInController: UIViewController {
 
     let defaults: UserDefaults? = UserDefaults.standard
         if switchState.isOn {
-        defaults?.set(true, forKey: "ISRemember")
+        defaults?.set(true, forKey: "isRemembered")
         defaults?.set(txtUser.text, forKey: "SavedUserName")
         defaults?.set(txtPassword.text, forKey: "SavedPassword")
     }
     else {
-        defaults?.set(false, forKey: "ISRemember")
+        defaults?.set(false, forKey: "isRemembered")
         }
     }
     

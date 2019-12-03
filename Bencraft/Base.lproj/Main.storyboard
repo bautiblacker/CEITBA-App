@@ -196,7 +196,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-4B-kiR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-4B-kiR">
                                 <rect key="frame" x="36" y="10" width="32" height="32"/>
                                 <state key="normal" image="icons8-menu-32"/>
                             </button>
@@ -246,7 +246,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="87m-CO-alJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ySG-CK-geX"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CEITBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-Cz-y4j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEITBA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-Cz-y4j">
                                 <rect key="frame" x="159" y="9" width="97" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.024686902760000001" green="0.067220740020000003" blue="0.31235864759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -446,6 +446,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VEx-FP-3oP"/>
                     <connections>
+                        <outlet property="logOutButton" destination="Zwz-Ux-AsY" id="btE-Fa-jN7"/>
                         <outlet property="nameLabel" destination="Igd-uS-iXD" id="yIg-JD-dcF"/>
                     </connections>
                 </viewController>
