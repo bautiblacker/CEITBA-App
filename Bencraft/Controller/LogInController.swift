@@ -86,30 +86,21 @@ class LogInController: UIViewController {
         
         ref.child(string).observeSingleEvent(of: .value)
         { (snapshot) in
-            let password = snapshot.value as! String
-            print("Contraseña correcta: \(password)")
-            let login = password == self.txtPassword.text
-            print("El resultado es: \(login)")
-            if login {
-                self.performSegue(withIdentifier: "LogInSuccessfully", sender: self)
+            if (snapshot.exists()) {
+                let password = snapshot.value as! String
+                print("Contraseña correcta: \(password)")
+                let login = password == self.txtPassword.text
+                print("El resultado es: \(login)")
+                if login {
+                    self.performSegue(withIdentifier: "LogInSuccessfully", sender: self)
+                } else {
+                    self.invalidLogIn()
+                }
+                return
             } else {
                 self.invalidLogIn()
-            }
-        }
-    }
-    
-    func checkUserAvailable() {
-        let ref = Database.database().reference()
-        legajo = txtUser.text
-        print("Los usuarios registrados son los siguientes: ")
-        ref.child("usuarios_registrados").observeSingleEvent(of: .value) {
-            (snapshot) in
-            let users = snapshot.value as! Array<String>
-            if (users.contains(self.legajo!)) {
-                self.validateAccount()
                 return
             }
-            self.invalidLogIn()
         }
     }
     
@@ -121,7 +112,7 @@ class LogInController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
                 if identifier == "LogInSuccessfully" {
-                    checkUserAvailable()
+                    validateAccount()
                 }
         return false
     }
