@@ -49,6 +49,9 @@ class DefaultViewController: UIViewController {
         if let destination = segue.destination as? BenefitsViewController {
             destination.category = segue.identifier!
         }
+        if let destination = segue.destination as? ActivitiesController {
+            destination.legajo = legajo
+        }
         
     }
     

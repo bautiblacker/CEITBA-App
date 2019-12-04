@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42267F46239776D60001C3D6 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F45239776D60001C3D6 /* ActivitiesController.swift */; };
+		42267F48239776E40001C3D6 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F47239776E40001C3D6 /* Usuarios.swift */; };
+		42267F4A239776EA0001C3D6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F49239776EA0001C3D6 /* Activities.swift */; };
 		42BA840F231E05EA008B7872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42BA840E231E05EA008B7872 /* GoogleService-Info.plist */; };
 		42BA841E231EB32A008B7872 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841D231EB32A008B7872 /* Protocols.swift */; };
 		42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841F231EBE62008B7872 /* MenuOptionCell.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42267F45239776D60001C3D6 /* ActivitiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
+		42267F47239776E40001C3D6 /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		42267F49239776EA0001C3D6 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		42BA840E231E05EA008B7872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42BA841D231EB32A008B7872 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		42BA841F231EBE62008B7872 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		42BA8412231EAC19008B7872 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				42267F45239776D60001C3D6 /* ActivitiesController.swift */,
 				42EFE4F02319AA1400FC79D8 /* LogInController.swift */,
 				42D733FC2367FB8F00222663 /* DefaultViewController.swift */,
 				42D733FE236820BE00222663 /* BenefitsViewController.swift */,
@@ -104,6 +111,8 @@
 		42BA8414231EAC28008B7872 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				42267F49239776EA0001C3D6 /* Activities.swift */,
+				42267F47239776E40001C3D6 /* Usuarios.swift */,
 				42BA8421231ECB88008B7872 /* MenuOption.swift */,
 				42BA8426231EE7FD008B7872 /* BenefitOption.swift */,
 				4351665B23255834008C11C4 /* Benefits.swift */,
@@ -321,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42267F4A239776EA0001C3D6 /* Activities.swift in Sources */,
 				42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */,
 				42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */,
+				42267F48239776E40001C3D6 /* Usuarios.swift in Sources */,
 				43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */,
 				4351665C23255834008C11C4 /* Benefits.swift in Sources */,
 				42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */,
@@ -332,6 +343,7 @@
 				42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */,
 				42BA841E231EB32A008B7872 /* Protocols.swift in Sources */,
 				42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */,
+				42267F46239776D60001C3D6 /* ActivitiesController.swift in Sources */,
 				4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
