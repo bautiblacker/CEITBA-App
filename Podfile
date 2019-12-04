@@ -11,4 +11,6 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
+
+pod 'PromisesSwift'
 end
