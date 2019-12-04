@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-cross" translatesAutoresizingMaskIntoConstraints="NO" id="zQN-35-zTo">
-                                <rect key="frame" x="87" y="162" width="240.00000000000011" height="128"/>
+                                <rect key="frame" x="87" y="162" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="1Q6-ag-vBW"/>
                                     <constraint firstAttribute="width" constant="240" id="OAk-Er-Qkh"/>
@@ -117,6 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" textContentType="username"/>
                                 <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="Wmf-fA-V8A"/>
                                     <segue destination="DNK-FE-5x8" kind="show" identifier="userAlreadyExists" id="liI-jh-oDN"/>
                                 </connections>
                             </textField>
@@ -127,7 +128,10 @@
                                     <constraint firstAttribute="height" constant="29" id="Ra2-8B-qIL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="SjA-Z1-K5g"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEITBA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-lQ-nVn">
                                 <rect key="frame" x="100" y="47" width="214" height="110"/>
@@ -161,11 +165,17 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="5w3-5r-seT"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lG-f5-Ngg">
                                 <rect key="frame" x="50" y="273" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="A7P-uW-tkZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-Oy-Pk4">
                                 <rect key="frame" x="50" y="210" width="314" height="34"/>
@@ -174,6 +184,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="X6k-zq-4TQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-Mr-9MI">
                                 <rect key="frame" x="50" y="462" width="314" height="34"/>
@@ -181,7 +194,10 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="tfy-am-dtt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="ids-MQ-nU6" eventType="editingDidEndOnExit" id="8AS-aQ-Bcw"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx9-ft-Ffu">
                                 <rect key="frame" x="50" y="639" width="121" height="52"/>
@@ -967,6 +983,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pOf-ib-dc2"/>
-        <segue reference="Jnl-8F-etz"/>
+        <segue reference="2HI-ZK-Lw3"/>
     </inferredMetricsTieBreakers>
 </document>

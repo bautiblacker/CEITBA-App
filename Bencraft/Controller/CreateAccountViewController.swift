@@ -34,7 +34,18 @@ class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func endEditing() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func didEndOnExit(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
     
     func validateInfo() {
         let ref = Database.database().reference()
@@ -47,9 +58,10 @@ class CreateAccountViewController: UIViewController {
         
         if verifyField(txtField: txtName) && verifyField(txtField: txtSurname) && verifyField(txtField: txtPassword) && verifyField(txtField: txtEmail) && verifyField(txtField: txtLegajo) && verifyPassword(password: txtPassword, rPassword: txtRPassword) {
             
-            ref.observeSingleEvent(of: .value)
+            ref.child("usuarios").child(legajo).observeSingleEvent(of: .value)
             { (snapshot) in
                 if snapshot.exists() {
+                    print(snapshot)
                     self.performSegue(withIdentifier: "userAlreadyExists", sender: self)
                     return
                 } else {
