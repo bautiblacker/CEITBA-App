@@ -13,97 +13,99 @@ import FirebaseFirestore
 import FirebaseDatabase
 import Promises
 
-class ActivitiesController : UIViewController {
-    @IBOutlet weak var displayLbl: UILabel!
+class ActivitiesController : UIViewController,UITableViewDelegate,UITableViewDataSource  {
+    var legajo: String!
+    
+    var act:Array<Activity> = []
+    let tableNoActivities = NoActivities(frame: CGRect.zero)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return act.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "healthyCell", for: indexPath)
+        
+        cell.textLabel?.text = act[indexPath.row].nombre
+        cell.detailTextLabel?.text = act[indexPath.row].desc
+        return cell
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    @IBOutlet weak var activitiesTableView: UITableView!
+
+
+    
     lazy var background: DispatchQueue = {
         return DispatchQueue.init(label: "background.queue", attributes: .concurrent)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activitiesTableView.dataSource = self
+        activitiesTableView.delegate = self
+        
+        legajo = "57129"
+        
+        //self.performSegue(withIdentifier: "myStuff", sender: self)
+        
+        //var a = Array<Activity>()
+        
         self.background.async {
-            let act: Array<Activity> = Activity.getMyActivities()
-            print(act)
-            print(Activity.removeActivity(activityPath: "idiomas/Guarani"))
+            self.act = Activity.getMyActivities(legajo: self.legajo)
+            DispatchQueue.main.async {
+                self.activitiesTableView.reloadData()
+            }
+            
+            //print(Activity.removeActivity(activityPath: "idiomas/Guarani"))
         }
+        
+//        if (self.act.count == 0) {
+//            let alert = UIAlertController(title: "No se encuentra inscripto en ninguna actividad", message: "", preferredStyle: UIAlertController.Style.alert)
+//
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//
+//        }
+//        view.addSubview(tableNoActivities)
+//        checkIfEmpty()
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
     
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Delete"){
+            (action,view,completion) in
+            let aux = self.act[indexPath.row].meta
+            print(aux)
+            self.background.async{
+                Activity.removeActivity(activityPath: aux,legajo: self.legajo )
+                DispatchQueue.main.async {
+                    self.activitiesTableView.reloadData()
+                }
+            }
+            self.act.remove(at: indexPath.row)
+            self.activitiesTableView.deleteRows(at:[indexPath], with: .automatic)
+            completion(true)
+        }
+        action.backgroundColor = .red
+        return action
+        
+    }
     
-//
-//    var db: Firestore!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        //displayLbl.text = ""
-//
-//        // [START setup]
-//        let settings = FirestoreSettings()
-//
-//        Firestore.firestore().settings = settings
-//        // [END setup]
-//        db = Firestore.firestore()
-//
-//        getMyActivities()
+//    func layoutNoActivities(){
+//        tableNoActivities.frame = view.bounds
 //    }
 //
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//
-//  private func getMyActivities()
-//  {
-//
-//        db.collection("alum_act").document("57610").getDocument { (document, error) in
-//            if let document = document {
-//                let group_array = document["ins"] as? Array ?? [""]
-//
-//                group_array.forEach{ activity in
-//
-//                    self.db.collection("actividades").document(activity).getDocument{ (document, error) in
-//                    if let document = document {
-//                        let nombre = document.get("nombre") as? String ?? ""
-//                        let descripcion = document.get("Descripcion") as? String ?? ""
-//                        print(nombre)
-//                        print(descripcion)
-//                        }
-//                    }
-//
-//                }
-//            }
-//
-//        }
-//
+//    func checkIfEmpty(){
+//        guard let empty =
 //    }
     
-//    private func getMyActivities()
-//    {
-//        var actArray = [Curso]()
-//        let myActivities = db.collection("alum_act").document("57610")
-//        myActivities.getDocument{ (document,err) in
-//            if let document = document, document.exists{
-//                let activities = document["ins"] as? Array ?? [""]
-//                let allActivities = self.db.collection("actividades")
-//
-//                activities.forEach { activity in
-//                    allActivities.document(activity).getDocument{ (document,err) in
-//                        if let document = document, document.exists{
-//                            let nombre = document.get("nombre") as? String ?? ""
-//                            let descripcion = document.get("Descripcion") as? String ?? ""
-//                            actArray.append(Curso(name:nombre,description: descripcion))
-//                        }else{
-//                            print("Document allActivities does not exist")
-//                        }
-//                    }
-//                }
-//            }else{
-//                print("Document myActivities does not exist")
-//            }
-//        }
-//
-//    }
     
 
-    
 }
 

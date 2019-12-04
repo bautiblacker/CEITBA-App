@@ -29,6 +29,7 @@
 		468F6C922367FC92000FDDE0 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F6C912367FC92000FDDE0 /* Activities.swift */; };
 		468F6C942368042C000FDDE0 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F6C932368042C000FDDE0 /* ActivitiesController.swift */; };
 		46FD804C2396FEE90009243B /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD804B2396FEE90009243B /* Usuarios.swift */; };
+		46FD80502397570C0009243B /* NoActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD804F2397570C0009243B /* NoActivities.swift */; };
 		A72EAC580DFCF2C6385F48BE /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D301B3F9B25E80520F83CF /* Pods_Bencraft.framework */; };
 >>>>>>> activities controller
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		468F6C912367FC92000FDDE0 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		468F6C932368042C000FDDE0 /* ActivitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
 		46FD804B2396FEE90009243B /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		46FD804F2397570C0009243B /* NoActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoActivities.swift; sourceTree = "<group>"; };
 		A88D6F582E40AE3937A2D477 /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
 		BB804D54BCCD87F65C471C25 /* Pods-Bencraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.release.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.release.xcconfig"; sourceTree = "<group>"; };
 		E9D301B3F9B25E80520F83CF /* Pods_Bencraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bencraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				42BA841F231EBE62008B7872 /* MenuOptionCell.swift */,
+				46FD804F2397570C0009243B /* NoActivities.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */,
 				42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */,
 				42EFE4F12319AA1400FC79D8 /* LogInController.swift in Sources */,
+				46FD80502397570C0009243B /* NoActivities.swift in Sources */,
 				42BA8427231EE7FD008B7872 /* BenefitOption.swift in Sources */,
 				42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */,
 				42BA841E231EB32A008B7872 /* Protocols.swift in Sources */,
