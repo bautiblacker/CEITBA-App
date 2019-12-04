@@ -11,6 +11,11 @@ import FirebaseDatabase
 
 class LogInController: UIViewController {
     
+    var legajo: String?
+    @IBAction func createAccount(_ sender: Any) {
+        performSegue(withIdentifier: "createAccountSegue", sender: self)
+    }
+    
     @IBOutlet weak var txtUser: UITextField!{
         didSet {
             txtUser.setIcon(#imageLiteral(resourceName: "user-icon"), #imageLiteral(resourceName: "separator-icon") )
@@ -23,22 +28,100 @@ class LogInController: UIViewController {
             
         }
     }
+    @IBOutlet weak var rememberSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         rememberSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
+         let defaults: UserDefaults? = UserDefaults.standard
+
+        // check if defaults already saved the details
+
+        if defaults?.bool(forKey: "isRemembered") ?? false {
+            txtUser.text = defaults?.value(forKey: "SavedUserName") as? String
+            txtPassword.text = defaults?.value(forKey: "SavedPassword") as? String
+            rememberSwitch.setOn(true, animated: false)
+            self.shouldPerformSegue(withIdentifier: "LogInSuccessfully", sender: self)
+        } else {
+            rememberSwitch.setOn(false, animated: false)
+        }
         // Do any additional setup after loading the view.
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
+        view.addGestureRecognizer(tapGesture)
 
-        
-//        let ref = Database.database().reference()
-        
-//        ref.child("userid").setValue("bla", forKey: "sss") Puedo setear/agregar valores a la DB asi
-//        ref.child("userid").observeSingleEvent(of: .value)
-//        { (snapshot) in
-//            let name = snapshot.value as? String
-//        } Asi puedo leer los valores de la DB
     }
+    
+    @objc func endEditing() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func didEndOnExit(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
+    @objc func stateChanged(_ switchState: UISwitch) {
 
-
+    let defaults: UserDefaults? = UserDefaults.standard
+        if switchState.isOn {
+        defaults?.set(true, forKey: "isRemembered")
+        defaults?.set(txtUser.text, forKey: "SavedUserName")
+        defaults?.set(txtPassword.text, forKey: "SavedPassword")
+    }
+    else {
+        defaults?.set(false, forKey: "isRemembered")
+        }
+    }
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        performSegue(withIdentifier: "ForgotPassword", sender: self)
+    }
+    
+    func validateAccount() {
+        let ref = Database.database().reference()
+        legajo = txtUser.text
+        let string = "usuarios/\(legajo ?? "")/contraseña"
+        print("Legajo: \(legajo ?? "")")
+        print("Contraseña ingresada: \(txtPassword.text ?? "")")
+        
+        ref.child(string).observeSingleEvent(of: .value)
+        { (snapshot) in
+            if (snapshot.exists()) {
+                let password = snapshot.value as! String
+                print("Contraseña correcta: \(password)")
+                let login = password == self.txtPassword.text
+                print("El resultado es: \(login)")
+                if login {
+                    self.performSegue(withIdentifier: "LogInSuccessfully", sender: self)
+                } else {
+                    self.invalidLogIn()
+                }
+                return
+            } else {
+                self.invalidLogIn()
+                return
+            }
+        }
+    }
+    
+    func invalidLogIn() {
+        let alert = UIAlertController(title: "Los datos ingresados son incorrectos.", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+                if identifier == "LogInSuccessfully" {
+                    validateAccount()
+                }
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DefaultViewController {
+            destination.legajo = legajo
+        }
+    }
 }
 
 extension UITextField {
@@ -89,4 +172,3 @@ extension UITextField {
         }
     }
 }
-
