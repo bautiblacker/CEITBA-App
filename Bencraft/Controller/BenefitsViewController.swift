@@ -47,13 +47,16 @@ class BenefitsViewController: UIViewController {
     func getBenefits() {
         let ref = Database.database().reference()
         benefitLabel.text = "\(category ?? "")".uppercased();
-        let string = "\(category ?? "")/"
+        let string = "\(category ?? "")"
+        print("Esta es la categoria: \(string)")
         
         ref.child(string).observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot)
             let benefit = snapshot.value as! [String:AnyObject]
             var index:Int = 0;
-            for (name, imageName) in benefit {
-                let b:Benefits = Benefits(description: name, featuredImage: UIImage(named: imageName as! String)!)
+            for (name, _) in benefit {
+                
+                let b:Benefits = Benefits(description: name, featuredImage: UIImage(named: name.lowercased())!)
                 self.benefits.insert(b, at: index)
                 index += 1
             }
@@ -80,6 +83,9 @@ extension BenefitsViewController : UICollectionViewDataSource {
         return cell
     }
 }
+
+
+
 
 /* Extrension that stop benefits scrolling in one benefit */
 extension BenefitsViewController : UIScrollViewDelegate, UICollectionViewDelegate {
