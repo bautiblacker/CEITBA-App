@@ -42,7 +42,7 @@ class ForgotPasswordController: UIViewController {
         
         let userMail = mail.text
         
-        let bodyStr = "from=CeitbAPP <mailgun@sandbox0f8417ed9c56413a821c30b4be88f3ef.mailgun.org>&to=Ceitba <\(userMail ?? "")>&subject=Reestablecer contraseña&text=Hubo una modificación para el alumno: \(userMail ?? ""). \nSe desea inscribir en: Gimnasio"
+        let bodyStr = "from=CeitbAPP <mailgun@sandbox0f8417ed9c56413a821c30b4be88f3ef.mailgun.org>&to=Ceitba <\(userMail ?? "")>&subject=Reestablecer contraseña&text=Se ha solicitado un cambio de contraseña para el usuario con Mail: \(userMail ?? "").\n\nSaludos! BenCraft Technologies"
         
         // appending the data
         request.httpBody = bodyStr.data(using: String.Encoding.utf8);
