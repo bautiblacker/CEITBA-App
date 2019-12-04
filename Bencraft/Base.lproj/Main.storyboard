@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-cross" translatesAutoresizingMaskIntoConstraints="NO" id="zQN-35-zTo">
-                                <rect key="frame" x="87" y="162" width="240" height="128"/>
+                                <rect key="frame" x="87" y="162" width="240.00000000000011" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="1Q6-ag-vBW"/>
                                     <constraint firstAttribute="width" constant="240" id="OAk-Er-Qkh"/>
@@ -826,19 +826,6 @@
                                     <segue destination="Zbl-AY-pES" kind="show" identifier="deportes" id="pOf-ib-dc2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-PI-xdg">
-                                <rect key="frame" x="60" y="495" width="294" height="48"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="36"/>
-                                <state key="normal" title="Otros">
-                                    <color key="titleColor" red="0.023529411760000001" green="0.043137254899999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-uS-iXD">
                                 <rect key="frame" x="15" y="80" width="384" height="50"/>
                                 <constraints>
@@ -861,21 +848,18 @@
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="8Kh-Z5-dwu" secondAttribute="trailing" constant="60" id="DOv-h4-jRM"/>
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="lvb-Dz-Czb" secondAttribute="trailing" constant="60" id="DSg-vT-yCw"/>
                             <constraint firstItem="Zwz-Ux-AsY" firstAttribute="centerX" secondItem="Uag-fS-kYy" secondAttribute="centerX" id="Inp-TG-Nln"/>
-                            <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="pMh-PI-xdg" secondAttribute="trailing" constant="60" id="PpO-ex-JIs"/>
                             <constraint firstItem="Igd-uS-iXD" firstAttribute="leading" secondItem="uBb-O9-mA7" secondAttribute="leading" constant="15" id="TmX-v9-ebm"/>
                             <constraint firstItem="gJI-ny-IMh" firstAttribute="top" secondItem="Uag-fS-kYy" secondAttribute="top" id="UqA-cD-gze"/>
                             <constraint firstItem="8Kh-Z5-dwu" firstAttribute="leading" secondItem="uBb-O9-mA7" secondAttribute="leading" constant="60" id="WeA-yv-bnr"/>
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="bottom" secondItem="Zwz-Ux-AsY" secondAttribute="bottom" constant="15" id="aEN-af-hgj"/>
                             <constraint firstItem="GUh-K0-YhX" firstAttribute="leading" secondItem="uBb-O9-mA7" secondAttribute="leading" constant="60" id="aW8-kx-U8H"/>
                             <constraint firstAttribute="trailing" secondItem="gJI-ny-IMh" secondAttribute="trailing" id="g9j-JP-Sec"/>
-                            <constraint firstItem="pMh-PI-xdg" firstAttribute="leading" secondItem="uBb-O9-mA7" secondAttribute="leading" constant="60" id="ise-3J-LPf"/>
                             <constraint firstItem="f7o-pY-Rpr" firstAttribute="leading" secondItem="uBb-O9-mA7" secondAttribute="leading" constant="60" id="jNC-EC-U1M"/>
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="AFE-ZG-wqH" secondAttribute="trailing" constant="60" id="jng-7x-2sF"/>
                             <constraint firstItem="GUh-K0-YhX" firstAttribute="top" secondItem="Igd-uS-iXD" secondAttribute="bottom" constant="25" id="kjR-2M-9x7"/>
                             <constraint firstItem="AFE-ZG-wqH" firstAttribute="top" secondItem="lvb-Dz-Czb" secondAttribute="bottom" constant="20" id="kq9-qK-LGv"/>
                             <constraint firstItem="lvb-Dz-Czb" firstAttribute="top" secondItem="GUh-K0-YhX" secondAttribute="bottom" constant="20" id="mbv-gT-9PB"/>
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="f7o-pY-Rpr" secondAttribute="trailing" constant="60" id="r7M-sv-Aek"/>
-                            <constraint firstItem="pMh-PI-xdg" firstAttribute="top" secondItem="8Kh-Z5-dwu" secondAttribute="bottom" constant="20" id="sOH-ZT-UIH"/>
                             <constraint firstItem="uBb-O9-mA7" firstAttribute="trailing" secondItem="Igd-uS-iXD" secondAttribute="trailing" constant="15" id="xoK-SD-xmW"/>
                             <constraint firstItem="Igd-uS-iXD" firstAttribute="centerX" secondItem="Uag-fS-kYy" secondAttribute="centerX" id="z27-0t-NgN"/>
                         </constraints>
@@ -991,7 +975,7 @@
         <image name="tickcircleflat_105996" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pOf-ib-dc2"/>
-        <segue reference="2HI-ZK-Lw3"/>
+        <segue reference="LHt-zM-XjK"/>
+        <segue reference="B0l-p3-l11"/>
     </inferredMetricsTieBreakers>
 </document>

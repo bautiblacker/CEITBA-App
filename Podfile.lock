@@ -125,7 +125,7 @@ DEPENDENCIES:
   - PromisesSwift
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -173,4 +173,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: acea541a98e9ac05a360d71282ebdf8902317339
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5

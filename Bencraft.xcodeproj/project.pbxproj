@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42267F46239776D60001C3D6 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F45239776D60001C3D6 /* ActivitiesController.swift */; };
+		42267F48239776E40001C3D6 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F47239776E40001C3D6 /* Usuarios.swift */; };
+		42267F4A239776EA0001C3D6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42267F49239776EA0001C3D6 /* Activities.swift */; };
 		42BA840F231E05EA008B7872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42BA840E231E05EA008B7872 /* GoogleService-Info.plist */; };
 		42BA841E231EB32A008B7872 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841D231EB32A008B7872 /* Protocols.swift */; };
 		42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA841F231EBE62008B7872 /* MenuOptionCell.swift */; };
@@ -23,9 +26,6 @@
 		4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323DE96232313D6002C5E8D /* SpecificBenefitCell.swift */; };
 		4351665C23255834008C11C4 /* Benefits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351665B23255834008C11C4 /* Benefits.swift */; };
 		43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */; };
-		462C99D2239770110013A143 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C99D1239770110013A143 /* Activities.swift */; };
-		462C99D4239770150013A143 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C99D3239770150013A143 /* ActivitiesController.swift */; };
-		462C99D6239770210013A143 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C99D5239770210013A143 /* Usuarios.swift */; };
 		76D8A456398A43FF33810EB3 /* Pods_Bencraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42267F45239776D60001C3D6 /* ActivitiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
+		42267F47239776E40001C3D6 /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		42267F49239776EA0001C3D6 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		42BA840E231E05EA008B7872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42BA841D231EB32A008B7872 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		42BA841F231EBE62008B7872 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
@@ -60,9 +63,6 @@
 		43ACB4322396D26E00783FCC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		43C9D0402352839600631DDA /* BencraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BencraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C9D04E2352885700631DDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
-		462C99D1239770110013A143 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activities.swift; path = ../../../../Activities.swift; sourceTree = "<group>"; };
-		462C99D3239770150013A143 /* ActivitiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitiesController.swift; path = ../../../../ActivitiesController.swift; sourceTree = "<group>"; };
-		462C99D5239770210013A143 /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuarios.swift; path = ../../../../Usuarios.swift; sourceTree = "<group>"; };
 		51BE4758E5474E7172C9498E /* Pods-Bencraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.debug.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC4EE36227FB1C99900C061 /* Pods_Bencraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bencraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7376AEEB5E162B09E985C2 /* Pods-Bencraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bencraft.release.xcconfig"; path = "Target Support Files/Pods-Bencraft/Pods-Bencraft.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		42BA8412231EAC19008B7872 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				462C99D3239770150013A143 /* ActivitiesController.swift */,
+				42267F45239776D60001C3D6 /* ActivitiesController.swift */,
 				42EFE4F02319AA1400FC79D8 /* LogInController.swift */,
 				42D733FC2367FB8F00222663 /* DefaultViewController.swift */,
 				42D733FE236820BE00222663 /* BenefitsViewController.swift */,
@@ -111,8 +111,8 @@
 		42BA8414231EAC28008B7872 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				462C99D5239770210013A143 /* Usuarios.swift */,
-				462C99D1239770110013A143 /* Activities.swift */,
+				42267F49239776EA0001C3D6 /* Activities.swift */,
+				42267F47239776E40001C3D6 /* Usuarios.swift */,
 				42BA8421231ECB88008B7872 /* MenuOption.swift */,
 				42BA8426231EE7FD008B7872 /* BenefitOption.swift */,
 				4351665B23255834008C11C4 /* Benefits.swift */,
@@ -330,12 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42267F4A239776EA0001C3D6 /* Activities.swift in Sources */,
 				42BA8420231EBE62008B7872 /* MenuOptionCell.swift in Sources */,
-				462C99D6239770210013A143 /* Usuarios.swift in Sources */,
-				462C99D2239770110013A143 /* Activities.swift in Sources */,
 				42BA8422231ECB88008B7872 /* MenuOption.swift in Sources */,
+				42267F48239776E40001C3D6 /* Usuarios.swift in Sources */,
 				43ACB4332396D26E00783FCC /* CreateAccountViewController.swift in Sources */,
-				462C99D4239770150013A143 /* ActivitiesController.swift in Sources */,
 				4351665C23255834008C11C4 /* Benefits.swift in Sources */,
 				42D8F43E239708AB009F833B /* ForgotPasswordController.swift in Sources */,
 				42D733FD2367FB8F00222663 /* DefaultViewController.swift in Sources */,
@@ -344,6 +343,7 @@
 				42F4A90A23683E0E004CB976 /* BenefitsViewController.swift in Sources */,
 				42BA841E231EB32A008B7872 /* Protocols.swift in Sources */,
 				42EFE4EF2319AA1400FC79D8 /* AppDelegate.swift in Sources */,
+				42267F46239776D60001C3D6 /* ActivitiesController.swift in Sources */,
 				4323DE97232313D6002C5E8D /* SpecificBenefitCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
